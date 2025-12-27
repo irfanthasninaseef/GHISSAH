@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHISSAH - Luxury Perfumes</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icon System (Remix Icon CDN for lightweight icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#C19A6B',
+                        black: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+
+<body>
+
+    <!-- 1. HEADER -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <!-- Brand -->
+            <a href="index.html" class="logo">GHISSAH</a>
+
+            <!-- Navigation -->
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="nav-icons">
+                <a href="#"><i class="ri-search-line"></i></a>
+                <a href="../Wishlist/wishlist.html"><i class="ri-heart-line"></i></a>
+                <a href="../Cart/cart.html"><i class="ri-shopping-bag-line"></i></a>
+                <a href="../Profile/profile.html"><i class="ri-user-line"></i></a>
+            </div>
+        </div>
+    </header>

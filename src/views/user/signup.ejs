@@ -1,0 +1,119 @@
+            
+            <%-include ('../partials/header')%>
+
+    <!-- 2. MAIN CONTENT (Centered Card) -->
+    <main class="flex-grow flex items-center justify-center p-4 py-20">
+        <div class="bg-white p-8 md:p-12 w-full max-w-md shadow-sm border border-gray-100">
+
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h1 class="font-serif text-3xl font-bold mb-2">Create Account</h1>
+                <p class="text-gray-500 text-sm">Join the world of luxury</p>
+            </div>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="space-y-6" novalidate>
+
+                <!-- Full Name -->
+                <div class="space-y-1">
+                    <label for="name" class="text-xs font-medium uppercase tracking-wider text-gray-700">Full
+                        Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors"
+                        placeholder="Enter your name" required>
+                    <p class="text-red-500 text-xs hidden" id="nameError">Name is required.</p>
+                </div>
+
+                <!-- Email -->
+                <div class="space-y-1">
+                    <label for="email" class="text-xs font-medium uppercase tracking-wider text-gray-700">Email
+                        Address</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors"
+                        placeholder="Enter your email" required>
+                    <p class="text-red-500 text-xs hidden" id="emailError">Please enter a valid email address.</p>
+                </div>
+
+                <!-- Password -->
+                <div class="space-y-1">
+                    <label for="password"
+                        class="text-xs font-medium uppercase tracking-wider text-gray-700">Password</label>
+                    <div class="relative">
+                        <input type="password" id="password" name="password"
+                            class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors"
+                            placeholder="Create a password" required>
+                        <button type="button" onclick="togglePassword('password', 'eyeIcon')"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black">
+                            <i class="ri-eye-line" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">Must be at least 8 characters.</p>
+                    <p class="text-red-500 text-xs hidden" id="passwordError">Password is required.</p>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="space-y-1">
+                    <label for="confirmPassword"
+                        class="text-xs font-medium uppercase tracking-wider text-gray-700">Confirm Password</label>
+                    <div class="relative">
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors"
+                            placeholder="Confirm your password" required>
+                        <button type="button" onclick="togglePassword('confirmPassword', 'eyeIconConfirm')"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black">
+                            <i class="ri-eye-line" id="eyeIconConfirm"></i>
+                        </button>
+                    </div>
+                    <p class="text-red-500 text-xs hidden" id="confirmError">Passwords do not match.</p>
+                </div>
+
+                <!-- Terms -->
+                <div class="flex items-start gap-2 pt-2">
+                    <input type="checkbox" id="terms" name="terms"
+                        class="mt-1 w-4 h-4 border-gray-300 rounded text-black focus:ring-0 cursor-pointer">
+                    <label for="terms" class="text-xs text-gray-600">I agree to the <a href="#"
+                            class="underline hover:text-black">Terms of Service</a> and <a href="#"
+                            class="underline hover:text-black">Privacy Policy</a>.</label>
+                </div>
+                <p class="text-red-500 text-xs hidden" id="termsError">You must agree to the terms.</p>
+
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-[#1A1A1A] text-white py-3.5 text-sm font-bold uppercase tracking-widest hover:bg-gold transition-colors relative">
+                    <span id="btnText">Create Account</span>
+                    <span id="loader" class="hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <i class="ri-loader-4-line animate-spin text-xl"></i>
+                    </span>
+                </button>
+            </form>
+
+            <!-- Social / Login -->
+            <div class="mt-8">
+                <div class="relative flex items-center justify-center mb-6">
+                    <span class="bg-white px-2 text-xs text-gray-400 uppercase">Or sign up with</span>
+                    <div class="absolute w-full h-px bg-gray-100 -z-10"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex items-center justify-center gap-2 border border-gray-200 py-2.5 text-sm text-gray-600 hover:border-black hover:text-black transition-colors">
+                        <i class="ri-google-fill text-lg"></i> Google
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-2 border border-gray-200 py-2.5 text-sm text-gray-600 hover:border-black hover:text-black transition-colors">
+                        <i class="ri-facebook-fill text-lg"></i> Facebook
+                    </button>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-sm text-gray-600">Already have an account? <a href="login.html"
+                            class="font-medium text-black hover:text-gold transition-colors border-b border-black hover:border-gold pb-0.5">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/signup.js"></script>
+    <%-include('../partials/footer') %>                                           
